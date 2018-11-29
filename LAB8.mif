@@ -1,0 +1,28 @@
+-- Altera Memory Initialization File (MIF)
+
+DEPTH = 1024;
+WIDTH = 16;
+
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+
+CONTENT
+  BEGIN
+    [000..3FF] : 0000;  -- Default to NOP
+
+           000 : 4800;  -- MAIN:   IN      SWITCHES    ;Read from SWITCHES
+           001 : 0830;  --         STORE   INDATA      ;Store value in INDATA
+           002 : 4C01;  -- LOOP:   OUT     LEDS        ;Write to LEDS
+           003 : 4C04;  --         OUT     SEVENSEG    ;Write to SEVENSEG
+           004 : 3001;  --         SHIFT   &H01        ;Shift left 1
+           005 : 0830;  --         STORE   INDATA      ;Store value in INDATA
+           006 : 1030;  --         SUB     INDATA      ;AC = 0
+           007 : 4C02;  --         OUT     TIMER       ;Reset TIMER
+           008 : 4802;  -- CHECK:  IN      TIMER       ;Read from TIMER
+           009 : 1031;  --         SUB     TWOSEC      ;TIMER - TWOSEC
+           00A : 2002;  --         JZERO   LOOP        ;If TIMER == 2s then LOOP
+           00B : 1C02;  --         JPOS    LOOP        ;If TIMER > 2s then LOOP
+           00C : 1408;  --         JUMP    CHECK       ;Else CHECK again
+           030 : 0000;  -- INDATA: DW      &H0000
+           031 : 0014;  -- TWOSEC: DW      &H0014
+  END;

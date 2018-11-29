@@ -1,0 +1,96 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 13.750 ns
+From           : IO_DATA[4]
+To             : SCOMP:inst8|AC[4]
+From Clock     : --
+To Clock       : CLOCK_50
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 12.605 ns
+From           : TIMER:inst7|COUNT[0]
+To             : IO_DATA[0]
+From Clock     : CLOCK_50
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 11.801 ns
+From           : SW[14]
+To             : IO_DATA[14]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : -4.982 ns
+From           : IO_DATA[6]
+To             : LEDS:inst14|BLED[6]
+From Clock     : --
+To Clock       : CLOCK_50
+Failed Paths   : 0
+
+Type           : Clock Setup: 'altpll0:inst|altpll:altpll_component|_clk0'
+Slack          : 6.491 ns
+Required Time  : 30.00 MHz ( period = 33.333 ns )
+Actual Time    : 49.14 MHz ( period = 20.352 ns )
+From           : SCOMP:inst8|altsyncram:MEMORY|altsyncram_o6t3:auto_generated|ram_block1a4~porta_address_reg9
+To             : SCOMP:inst8|AC[10]
+From Clock     : altpll0:inst|altpll:altpll_component|_clk0
+To Clock       : altpll0:inst|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLOCK_50'
+Slack          : 15.585 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : 226.50 MHz ( period = 4.415 ns )
+From           : acc_clk_gen:inst19|count_10hz[8]
+To             : acc_clk_gen:inst19|count_10hz[0]
+From Clock     : CLOCK_50
+To Clock       : CLOCK_50
+Failed Paths   : 0
+
+Type           : Clock Hold: 'CLOCK_50'
+Slack          : 0.185 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : N/A
+From           : acc_clk_gen:inst19|clock_10hz_int
+To             : acc_clk_gen:inst19|clock_10Hz
+From Clock     : CLOCK_50
+To Clock       : CLOCK_50
+Failed Paths   : 0
+
+Type           : Clock Hold: 'altpll0:inst|altpll:altpll_component|_clk0'
+Slack          : 0.524 ns
+Required Time  : 30.00 MHz ( period = 33.333 ns )
+Actual Time    : N/A
+From           : SCOMP:inst8|PC[1]
+To             : SCOMP:inst8|PC_STACK[1]
+From Clock     : altpll0:inst|altpll:altpll_component|_clk0
+To Clock       : altpll0:inst|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

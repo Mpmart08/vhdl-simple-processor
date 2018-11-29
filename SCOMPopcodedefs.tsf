@@ -1,0 +1,29 @@
+# Pattern symbol file
+# TSF Format Type Display Radix File Radix
+# =============== ======= ============= ==========
+#+ Version 2.1.0 PATTERN BIN BIN
+
+# Symbol Name Pattern Color
+
+# ================ =========== ==========
+n/a    0XXXXXX
+NOP    1000000 @white @blue
+LOAD   1000001 @white @blue
+STORE  1000010 @white @blue
+ADD    1000011 @white @blue
+SUB    1000100 @white @blue
+JUMP   1000101 @white @blue
+JNEG   1000110 @white @blue
+JPOS   1000111 @white @blue
+JZERO  1001000 @white @blue
+AND    1001001 @white @blue
+OR     1001010 @white @blue
+XOR    1001011 @white @blue
+SHIFT  1001100 @white @blue
+ADDI   1001101 @white @blue
+ILOAD  1001110 @white @blue
+ISTORE 1001111 @white @blue
+CALL   1010000 @white @blue
+RETURN 1010001 @white @blue
+IN     1010010 @white @blue
+OUT    1010011 @white @blue
